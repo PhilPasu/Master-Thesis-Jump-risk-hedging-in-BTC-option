@@ -1,6 +1,6 @@
-# Thesis — Jump-Risk Hedging on BTC Options
+# Thesis — Jump-Risk Hedging on BTC Option
 
-## Introduction — What this work is and how to read it (big picture)
+## Introduction — What this work is and how to read it
 
 **What we’re deciding.** A practical recipe for hedging **Bitcoin options** when prices can **jump**.
 
