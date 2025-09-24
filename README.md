@@ -1,16 +1,15 @@
-# Thesis — Jump-Risk Hedging on BTC Options
+**What we’re deciding.** A practical recipe for hedging **Bitcoin options** when prices can **jump**.
 
-## Introduction — What this work is and how to read it
+**What varies in the recipe (three knobs):**
+- **Model of the market:**  
+  **MJD** (Merton Jump-diffusion), **SVJ** (stochastic volatility + jumps), **SVCJ** (stochastic volatility + contemporaneous jumps).
+- **Hedging instruments:**  
+  **Δ-neutral** (underlying only) vs **Jump-risk hedging** using **1 Call + 1 Put + Underlying**; we also check a larger set (**2C+2P+U**).
+- **Implementation style:**  
+  **Standard** (use the model’s own greeks) vs **BS-estimated** (use Black-Scholes greeks from market IVs).
 
-**Goal.** How should we hedge **Bitcoin options** when prices can **jump**?  
-This project compares three models, from simple to rich:
-
-- **MJD** — baseline with occasional price jumps  
-- **SVJ** — stochastic volatility + price jumps  
-- **SVCJ** — prices **and** volatility can jump together (richest)
-
-We care about one practical outcome: **realized hedging error**.  
-Which model gives the most reliable foundation for hedging?
+**What “better” means.** We judge everything by **realized hedging error in dollars** (weekly absolute errors).  
+Lower error = less cash bleed in real life.
 
 ---
 
